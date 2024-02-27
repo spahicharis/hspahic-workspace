@@ -19,6 +19,11 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "paths": {
+      "nx-ribbon": [
+        "./dist/nx-ribbon"
+      ]
+    },
     "lib": [
       "ES2022",
       "dom"
