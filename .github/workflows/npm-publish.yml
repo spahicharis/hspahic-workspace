@@ -19,6 +19,7 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       - run: npm i
+      - run: npm i -g @angular/cli
       - run: ng version
       - run: npm run build
         env:
