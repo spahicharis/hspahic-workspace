@@ -1,0 +1,49 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "nx-loading-spinner",
+  "projectType": "library",
+  "sourceRoot": "projects/nx-loading-spinner/src",
+  "prefix": "lib",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "options": {
+        "project": "projects/nx-loading-spinner/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "projects/nx-loading-spinner/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "projects/nx-loading-spinner/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production",
+      "outputs": [
+        "{workspaceRoot}/dist/nx-loading-spinner"
+      ]
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "tsConfig": "projects/nx-loading-spinner/tsconfig.spec.json",
+        "polyfills": [
+          "zone.js",
+          "zone.js/testing"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@angular-eslint/builder:lint",
+      "options": {
+        "lintFilePatterns": [
+          "projects/nx-loading-spinner/**/*.ts",
+          "projects/nx-loading-spinner/**/*.html"
+        ]
+      },
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    }
+  }
+}

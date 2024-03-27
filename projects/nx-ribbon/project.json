@@ -1,0 +1,49 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "nx-ribbon",
+  "projectType": "library",
+  "sourceRoot": "projects/nx-ribbon/src",
+  "prefix": "lib",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "options": {
+        "project": "projects/nx-ribbon/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "projects/nx-ribbon/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "projects/nx-ribbon/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production",
+      "outputs": [
+        "{workspaceRoot}/dist/nx-ribbon"
+      ]
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "tsConfig": "projects/nx-ribbon/tsconfig.spec.json",
+        "polyfills": [
+          "zone.js",
+          "zone.js/testing"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@angular-eslint/builder:lint",
+      "options": {
+        "lintFilePatterns": [
+          "projects/nx-ribbon/**/*.ts",
+          "projects/nx-ribbon/**/*.html"
+        ]
+      },
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    }
+  }
+}
