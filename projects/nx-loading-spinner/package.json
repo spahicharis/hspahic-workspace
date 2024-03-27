@@ -1,0 +1,20 @@
+{
+  "name": "@hspahic/nx-loading-spinner",
+  "version": "0.0.1",
+  "keywords": [
+    "loading",
+    "spinner",
+    "angular",
+    "nx",
+    "development",
+    "library"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^17.2.0",
+    "@angular/core": "^17.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

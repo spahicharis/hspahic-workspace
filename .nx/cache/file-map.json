@@ -1,0 +1,189 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.2.8",
+  "deps": {
+    "@angular/animations": "^17.2.0",
+    "@angular/common": "^17.2.0",
+    "@angular/compiler": "^17.2.0",
+    "@angular/core": "^17.2.0",
+    "@angular/forms": "^17.2.0",
+    "@angular/platform-browser": "^17.2.0",
+    "@angular/platform-browser-dynamic": "^17.2.0",
+    "@angular/router": "^17.2.0",
+    "primeng": "^17.8.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3",
+    "@angular-devkit/build-angular": "^17.2.1",
+    "@angular-eslint/builder": "17.2.1",
+    "@angular-eslint/eslint-plugin": "17.2.1",
+    "@angular-eslint/eslint-plugin-template": "17.2.1",
+    "@angular-eslint/schematics": "17.2.1",
+    "@angular-eslint/template-parser": "17.2.1",
+    "@angular/cli": "^17.2.0",
+    "@angular/compiler-cli": "^17.2.0",
+    "@types/jasmine": "~5.1.0",
+    "@typescript-eslint/eslint-plugin": "6.19.0",
+    "@typescript-eslint/parser": "6.19.0",
+    "eslint": "^8.56.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^17.2.0",
+    "typescript": "~5.3.2"
+  },
+  "pathMappings": {
+    "nx-ribbon": [
+      "./dist/nx-ribbon"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "17241496168097493888"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "4903417595469836753"
+      },
+      {
+        "file": ".github/workflows/npm-publish.yml",
+        "hash": "15234082849482415836"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "1112538486504466239"
+      },
+      {
+        "file": "README.md",
+        "hash": "15148163088268407807"
+      },
+      {
+        "file": "angular.json",
+        "hash": "16148348155718268125"
+      },
+      {
+        "file": "apps/.eslintrc.json",
+        "hash": "4476510151135444087"
+      },
+      {
+        "file": "apps/src/app/app.component.html",
+        "hash": "16059357930837884093"
+      },
+      {
+        "file": "apps/src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/src/app/app.component.spec.ts",
+        "hash": "2444010941378180770"
+      },
+      {
+        "file": "apps/src/app/app.component.ts",
+        "hash": "16314559302343943015"
+      },
+      {
+        "file": "apps/src/app/app.config.ts",
+        "hash": "5548986198782384011"
+      },
+      {
+        "file": "apps/src/app/app.routes.ts",
+        "hash": "809736233805555256"
+      },
+      {
+        "file": "apps/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "apps/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "apps/src/index.html",
+        "hash": "614770839733847245"
+      },
+      {
+        "file": "apps/src/main.ts",
+        "hash": "4169901790405087765"
+      },
+      {
+        "file": "apps/src/styles.scss",
+        "hash": "11853438106375282590"
+      },
+      {
+        "file": "apps/tsconfig.app.json",
+        "hash": "9141270935498973864"
+      },
+      {
+        "file": "apps/tsconfig.spec.json",
+        "hash": "16131161293462025937"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "14101715661433476523"
+      },
+      {
+        "file": "package.json",
+        "hash": "1161290445295881247"
+      },
+      {
+        "file": "projects/nx-ribbon/.eslintrc.json",
+        "hash": "17261852592110769405"
+      },
+      {
+        "file": "projects/nx-ribbon/README.md",
+        "hash": "9838279405010182691"
+      },
+      {
+        "file": "projects/nx-ribbon/ng-package.json",
+        "hash": "2702390294967300368"
+      },
+      {
+        "file": "projects/nx-ribbon/package.json",
+        "hash": "4330490941380282423"
+      },
+      {
+        "file": "projects/nx-ribbon/src/lib/nx-ribbon.component.spec.ts",
+        "hash": "4557041802846390603"
+      },
+      {
+        "file": "projects/nx-ribbon/src/lib/nx-ribbon.component.ts",
+        "hash": "17478357138364482122"
+      },
+      {
+        "file": "projects/nx-ribbon/src/lib/nx-ribbon.service.spec.ts",
+        "hash": "1879453259747226301"
+      },
+      {
+        "file": "projects/nx-ribbon/src/lib/nx-ribbon.service.ts",
+        "hash": "16927943164214993601"
+      },
+      {
+        "file": "projects/nx-ribbon/src/public-api.ts",
+        "hash": "859480223204941871"
+      },
+      {
+        "file": "projects/nx-ribbon/tsconfig.lib.json",
+        "hash": "3854248313799891276"
+      },
+      {
+        "file": "projects/nx-ribbon/tsconfig.lib.prod.json",
+        "hash": "6958467553555132988"
+      },
+      {
+        "file": "projects/nx-ribbon/tsconfig.spec.json",
+        "hash": "6187331034101419811"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "16510399544445306455"
+      }
+    ]
+  }
+}

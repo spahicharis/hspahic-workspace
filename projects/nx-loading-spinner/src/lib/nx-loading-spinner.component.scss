@@ -1,0 +1,200 @@
+/*
+ * Animation
+ */
+
+@-webkit-keyframes ball-clip-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes ball-clip-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes ball-clip-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ball-clip-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Make clicks pass-through */
+
+#loading-bar,
+#loading-bar-spinner {
+  pointer-events: none;
+  -webkit-pointer-events: none;
+  -webkit-transition: linear all;
+  -o-transition: linear all;
+  transition: linear all;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+}
+
+#loading-bar.ng-enter,
+#loading-bar.ng-leave.ng-leave-active,
+#loading-bar-spinner.ng-enter,
+#loading-bar-spinner.ng-leave.ng-leave-active {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#loading-bar.ng-enter.ng-enter-active,
+#loading-bar.ng-leave,
+#loading-bar-spinner.ng-enter.ng-enter-active,
+#loading-bar-spinner.ng-leave {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+#loading-bar .bar {
+  -webkit-transition: width;
+  -o-transition: width;
+  transition: width;
+  -webkit-transition-duration: 350ms;
+  transition-duration: 350ms;
+  background: rgba(0, 0, 0, 0.15);
+  position: fixed;
+  z-index: 10002;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  border-bottom-right-radius: 1px;
+  border-top-right-radius: 1px;
+}
+
+
+/* Fancy blur effect */
+
+#loading-bar .peg {
+  position: absolute;
+  width: 70px;
+  right: 0;
+  top: 0;
+  height: 2px;
+  opacity: 0.45;
+  filter: alpha(opacity=45);
+  box-shadow: #fff 1px 0 6px 1px;
+  border-radius: 100%;
+  z-index: 99999;
+}
+
+#loading-bar-spinner {
+  //width: 56px;
+  //height: 56px;
+  text-align: center;
+  padding: 14px;
+  border-radius: 50%;
+  position: fixed;
+  top: 105px;
+  left: 50%;
+  margin-left: -28px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+  z-index: 999999;
+}
+
+#loading-bar-spinner .spinner-icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  float: left;
+  background: transparent !important;
+  border: 2px solid red;
+  border-bottom-color: transparent !important;
+  border-radius: 100%;
+  -webkit-animation: ball-clip-rotate 0.75s linear infinite;
+  -o-animation: ball-clip-rotate 0.75s linear infinite;
+  animation: ball-clip-rotate 0.75s linear infinite;
+}
+
+#loading-bar-spinner:before,
+#loading-bar-spinner:after {
+  content: " ";
+  display: table;
+}
+
+#loading-bar-spinner:after {
+  clear: both;
+}
+
+#loading-bar-spinner:before,
+#loading-bar-spinner:after {
+  content: " ";
+  display: table;
+}
+
+#loading-bar-spinner:after {
+  clear: both;
+}

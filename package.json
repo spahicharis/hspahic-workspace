@@ -4,7 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build nx-ribbon",
+    "build:nx-ribbon": "ng build nx-ribbon",
+    "build:nx-ribbon:watch": "ng build nx-ribbon --watch",
+    "build:nx-loading-spinner": "ng build nx-loading-spinner",
+    "build:nx-loading-spinner:watch": "ng build nx-loading-spinner --watch",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"

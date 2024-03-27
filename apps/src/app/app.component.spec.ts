@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'ribbon-showcase' title`, () => {
+  it(`should have the 'showcase' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ribbon-showcase');
+    expect(app.title).toEqual('showcase');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ribbon-showcase');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, showcase');
   });
 });

@@ -19,7 +19,17 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "baseUrl": ".",
     "paths": {
+      "@hspahic/nx-ribbon": [
+        "./projects/nx-ribbon/src/public-api.ts"
+      ],
+      "@hspahic/nx-loading-spinner": [
+        "./projects/nx-loading-spinner/src/public-api.ts"
+      ],
+      "nx-loading-spinner": [
+        "./dist/nx-loading-spinner"
+      ],
       "nx-ribbon": [
         "./dist/nx-ribbon"
       ]

@@ -3,49 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nx-ribbon": {
-      "projectType": "library",
-      "root": "projects/nx-ribbon",
-      "sourceRoot": "projects/nx-ribbon/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/nx-ribbon/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/nx-ribbon/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/nx-ribbon/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "tsConfig": "projects/nx-ribbon/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "projects/nx-ribbon/**/*.ts",
-              "projects/nx-ribbon/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "ribbon-showcase": {
+    "showcase": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -59,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ribbon-showcase",
+            "outputPath": "dist/showcase",
             "index": "apps/src/index.html",
             "browser": "apps/src/main.ts",
             "polyfills": [
@@ -104,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ribbon-showcase:build:production"
+              "buildTarget": "showcase:build:production"
             },
             "development": {
-              "buildTarget": "ribbon-showcase:build:development"
+              "buildTarget": "showcase:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -115,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ribbon-showcase:build"
+            "buildTarget": "showcase:build"
           }
         },
         "test": {
@@ -143,6 +101,90 @@
             "lintFilePatterns": [
               "apps/**/*.ts",
               "apps/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "nx-ribbon": {
+      "projectType": "library",
+      "root": "projects/nx-ribbon",
+      "sourceRoot": "projects/nx-ribbon/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/nx-ribbon/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/nx-ribbon/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/nx-ribbon/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/nx-ribbon/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/nx-ribbon/**/*.ts",
+              "projects/nx-ribbon/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "nx-loading-spinner": {
+      "projectType": "library",
+      "root": "projects/nx-loading-spinner",
+      "sourceRoot": "projects/nx-loading-spinner/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/nx-loading-spinner/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/nx-loading-spinner/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/nx-loading-spinner/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/nx-loading-spinner/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/nx-loading-spinner/**/*.ts",
+              "projects/nx-loading-spinner/**/*.html"
             ]
           }
         }
