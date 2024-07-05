@@ -1,6 +1,6 @@
 <p-menubar>
   <ng-template pTemplate="start">
-    <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" alt="Logo" />
+    <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" alt="Logo"/>
   </ng-template>
 </p-menubar>
 
@@ -15,4 +15,29 @@
 
 <lib-nx-ribbon text="Showcase example"></lib-nx-ribbon>
 
-<lib-nx-loading-spinner color="red"></lib-nx-loading-spinner>
+<!--<lib-nx-loading-spinner color="red"></lib-nx-loading-spinner>-->
+
+
+<p>Form valid? : {{ form.valid }}</p>
+
+
+<p>Name valid?: {{ form.controls.name.valid }}</p>
+<p>Country valid?: {{ form.controls.country.valid }} | {{form.controls.country.value}}</p>
+
+<form [formGroup]="form">
+
+  <p>
+
+    <input formControlName="name">
+  </p>
+
+
+  <p>
+    <label for="country-element">Country name</label>
+    <input-predictive
+      id="country-element"
+      [predictions]="countries"></input-predictive>
+  </p>
+
+
+</form>

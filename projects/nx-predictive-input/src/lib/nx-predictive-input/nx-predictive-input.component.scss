@@ -1,0 +1,26 @@
+$pi-container-max-width: 250px !default;
+$pi-right-side-opacity: 0.3 !default;
+$pi-right-side-color: grey !default;
+
+.pi-container {
+  position: relative;
+  max-width: $pi-container-max-width;
+
+  .pi-left-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black;
+  }
+
+  .pi-right-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: $pi-right-side-opacity;
+    color: $pi-right-side-color;
+    background-color: transparent;
+    border-color: transparent;
+  }
+}

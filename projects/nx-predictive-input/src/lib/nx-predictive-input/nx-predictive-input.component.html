@@ -1,0 +1,9 @@
+<div class="pi-container">
+  <input type="text" class="pi-left-side"
+         [formControl]="inputModel"
+         (input)="onInput()"
+         (keydown)="onKeydown($event)">
+  <input type="text" class="pi-right-side"
+         [value]="inputModelRight"
+         readonly>
+</div>

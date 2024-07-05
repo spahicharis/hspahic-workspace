@@ -1,0 +1,36 @@
+{
+  "name": "nx-predictive-input",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/nx-predictive-input/src",
+  "prefix": "lib",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "projects/nx-predictive-input/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "projects/nx-predictive-input/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "projects/nx-predictive-input/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "projects/nx-predictive-input/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

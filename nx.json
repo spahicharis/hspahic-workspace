@@ -24,6 +24,33 @@
         "default",
         "{workspaceRoot}/.eslintrc.json"
       ]
+    },
+    "@nx/jest:jest": {
+      "cache": true,
+      "inputs": [
+        "default",
+        "^production",
+        "{workspaceRoot}/jest.preset.js"
+      ],
+      "options": {
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "@nx/angular:package": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production"
+      ]
     }
   },
   "defaultBase": "main",
@@ -38,8 +65,21 @@
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/**/*.spec.[jt]s",
       "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/eslint.config.js"
+      "!{projectRoot}/eslint.config.js",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/src/test-setup.[jt]s",
+      "!{projectRoot}/test-setup.[jt]s"
     ]
   },
-  "nxCloudAccessToken": "ZWYyMzQzMmItMjNlZC00MDgwLTgxOTQtN2M0NDc5NWU3ZGEwfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "ZWYyMzQzMmItMjNlZC00MDgwLTgxOTQtN2M0NDc5NWU3ZGEwfHJlYWQtd3JpdGU=",
+  "generators": {
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nx/angular:component": {
+      "style": "css"
+    }
+  }
 }
