@@ -1,6 +1,6 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "name": "nx-loading-spinner",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "projects/nx-loading-spinner/src",
   "prefix": "lib",
@@ -19,18 +19,13 @@
         }
       },
       "defaultConfiguration": "production",
-      "outputs": [
-        "{workspaceRoot}/dist/nx-loading-spinner"
-      ]
+      "outputs": ["{workspaceRoot}/dist/nx-loading-spinner"]
     },
     "test": {
       "executor": "@angular-devkit/build-angular:karma",
       "options": {
         "tsConfig": "projects/nx-loading-spinner/tsconfig.spec.json",
-        "polyfills": [
-          "zone.js",
-          "zone.js/testing"
-        ]
+        "polyfills": ["zone.js", "zone.js/testing"]
       }
     },
     "lint": {
@@ -41,9 +36,7 @@
           "projects/nx-loading-spinner/**/*.html"
         ]
       },
-      "outputs": [
-        "{options.outputFile}"
-      ]
+      "outputs": ["{options.outputFile}"]
     }
   }
 }

@@ -1,6 +1,6 @@
 {
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
   "name": "showcase",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "generators": {
     "@schematics/angular:component": {
@@ -16,18 +16,11 @@
         "outputPath": "dist/showcase",
         "index": "apps/src/index.html",
         "browser": "apps/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/src/favicon.ico",
-          "apps/src/assets"
-        ],
-        "styles": [
-          "apps/src/styles.scss"
-        ],
+        "assets": ["apps/src/favicon.ico", "apps/src/assets"],
+        "styles": ["apps/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -75,33 +68,20 @@
     "test": {
       "executor": "@angular-devkit/build-angular:karma",
       "options": {
-        "polyfills": [
-          "zone.js",
-          "zone.js/testing"
-        ],
+        "polyfills": ["zone.js", "zone.js/testing"],
         "tsConfig": "apps/tsconfig.spec.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/src/favicon.ico",
-          "apps/src/assets"
-        ],
-        "styles": [
-          "apps/src/styles.scss"
-        ],
+        "assets": ["apps/src/favicon.ico", "apps/src/assets"],
+        "styles": ["apps/src/styles.scss"],
         "scripts": []
       }
     },
     "lint": {
       "executor": "@angular-eslint/builder:lint",
       "options": {
-        "lintFilePatterns": [
-          "apps/**/*.ts",
-          "apps/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/**/*.ts", "apps/**/*.html"]
       },
-      "outputs": [
-        "{options.outputFile}"
-      ]
+      "outputs": ["{options.outputFile}"]
     }
   }
 }

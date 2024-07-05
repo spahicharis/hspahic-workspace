@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["ES2022", "dom"],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@hspahic/nx-loading-spinner": [
+        "./projects/nx-loading-spinner/src/public-api.ts"
+      ],
+      "@hspahic/nx-predictive-input": [
+        "projects/nx-predictive-input/src/index.ts"
+      ],
+      "@hspahic/nx-ribbon": ["./projects/nx-ribbon/src/public-api.ts"],
+      "nx-loading-spinner": ["./dist/nx-loading-spinner"],
+      "nx-predictive-input": ["nx-predictive-input/src/index.ts"],
+      "nx-ribbon": ["./dist/nx-ribbon"]
+    }
+  }
+}

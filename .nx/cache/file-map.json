@@ -1,6 +1,6 @@
 {
   "version": "6.0",
-  "nxVersion": "17.2.8",
+  "nxVersion": "18.1.3",
   "deps": {
     "@angular/animations": "^17.2.0",
     "@angular/common": "^17.2.0",
@@ -15,6 +15,8 @@
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3",
     "@angular-devkit/build-angular": "^17.2.1",
+    "@angular-devkit/core": "^17.2.0",
+    "@angular-devkit/schematics": "^17.2.0",
     "@angular-eslint/builder": "17.2.1",
     "@angular-eslint/eslint-plugin": "17.2.1",
     "@angular-eslint/eslint-plugin-template": "17.2.1",
@@ -22,168 +24,452 @@
     "@angular-eslint/template-parser": "17.2.1",
     "@angular/cli": "^17.2.0",
     "@angular/compiler-cli": "^17.2.0",
+    "@angular/language-service": "^17.2.0",
+    "@nx/angular": "18.1.3",
+    "@nx/jest": "18.1.3",
+    "@nx/js": "18.1.3",
+    "@nx/workspace": "18.1.3",
+    "@schematics/angular": "^17.2.0",
+    "@swc-node/register": "~1.8.0",
+    "@swc/core": "~1.3.85",
+    "@swc/helpers": "~0.5.2",
     "@types/jasmine": "~5.1.0",
+    "@types/jest": "^29.4.0",
+    "@types/node": "18.16.9",
     "@typescript-eslint/eslint-plugin": "6.19.0",
     "@typescript-eslint/parser": "6.19.0",
+    "autoprefixer": "^10.4.0",
     "eslint": "^8.56.0",
     "jasmine-core": "~5.1.0",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
+    "jest-preset-angular": "~14.0.3",
+    "jsonc-eslint-parser": "^2.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^17.2.0",
+    "nx": "18.1.3",
+    "postcss": "^8.4.5",
+    "postcss-url": "~10.1.3",
+    "prettier": "^2.6.2",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
     "typescript": "~5.3.2"
   },
   "pathMappings": {
+    "@hspahic/nx-loading-spinner": [
+      "./projects/nx-loading-spinner/src/public-api.ts"
+    ],
+    "@hspahic/nx-predictive-input": [
+      "projects/nx-predictive-input/src/index.ts"
+    ],
+    "@hspahic/nx-ribbon": [
+      "./projects/nx-ribbon/src/public-api.ts"
+    ],
+    "nx-loading-spinner": [
+      "./dist/nx-loading-spinner"
+    ],
+    "nx-predictive-input": [
+      "nx-predictive-input/src/index.ts"
+    ],
     "nx-ribbon": [
       "./dist/nx-ribbon"
     ]
   },
   "nxJsonPlugins": [],
   "fileMap": {
-    "projectFileMap": {},
     "nonProjectFiles": [
       {
         "file": ".editorconfig",
         "hash": "17241496168097493888"
       },
       {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "6865897343727881723"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "3276858591434242074"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "11181016623674335086"
+      },
+      {
+        "file": ".github/workflows/build-publish.yml",
+        "hash": "16478685808309424986"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "package.json",
+        "hash": "475786947830131803"
+      },
+      {
         "file": ".eslintrc.json",
         "hash": "4903417595469836753"
       },
       {
-        "file": ".github/workflows/npm-publish.yml",
-        "hash": "15234082849482415836"
+        "file": "jest.config.ts",
+        "hash": "3494843969422251966"
       },
       {
-        "file": ".gitignore",
-        "hash": "1112538486504466239"
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "15013268156973263846"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10646153538588754999"
       },
       {
         "file": "README.md",
         "hash": "15148163088268407807"
-      },
-      {
-        "file": "angular.json",
-        "hash": "16148348155718268125"
-      },
-      {
-        "file": "apps/.eslintrc.json",
-        "hash": "4476510151135444087"
-      },
-      {
-        "file": "apps/src/app/app.component.html",
-        "hash": "16059357930837884093"
-      },
-      {
-        "file": "apps/src/app/app.component.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/src/app/app.component.spec.ts",
-        "hash": "2444010941378180770"
-      },
-      {
-        "file": "apps/src/app/app.component.ts",
-        "hash": "16314559302343943015"
-      },
-      {
-        "file": "apps/src/app/app.config.ts",
-        "hash": "5548986198782384011"
-      },
-      {
-        "file": "apps/src/app/app.routes.ts",
-        "hash": "809736233805555256"
-      },
-      {
-        "file": "apps/src/assets/.gitkeep",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "apps/src/favicon.ico",
-        "hash": "3988961587069885523"
-      },
-      {
-        "file": "apps/src/index.html",
-        "hash": "614770839733847245"
-      },
-      {
-        "file": "apps/src/main.ts",
-        "hash": "4169901790405087765"
-      },
-      {
-        "file": "apps/src/styles.scss",
-        "hash": "11853438106375282590"
-      },
-      {
-        "file": "apps/tsconfig.app.json",
-        "hash": "9141270935498973864"
-      },
-      {
-        "file": "apps/tsconfig.spec.json",
-        "hash": "16131161293462025937"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "14101715661433476523"
-      },
-      {
-        "file": "package.json",
-        "hash": "1161290445295881247"
-      },
-      {
-        "file": "projects/nx-ribbon/.eslintrc.json",
-        "hash": "17261852592110769405"
-      },
-      {
-        "file": "projects/nx-ribbon/README.md",
-        "hash": "9838279405010182691"
-      },
-      {
-        "file": "projects/nx-ribbon/ng-package.json",
-        "hash": "2702390294967300368"
-      },
-      {
-        "file": "projects/nx-ribbon/package.json",
-        "hash": "4330490941380282423"
-      },
-      {
-        "file": "projects/nx-ribbon/src/lib/nx-ribbon.component.spec.ts",
-        "hash": "4557041802846390603"
-      },
-      {
-        "file": "projects/nx-ribbon/src/lib/nx-ribbon.component.ts",
-        "hash": "17478357138364482122"
-      },
-      {
-        "file": "projects/nx-ribbon/src/lib/nx-ribbon.service.spec.ts",
-        "hash": "1879453259747226301"
-      },
-      {
-        "file": "projects/nx-ribbon/src/lib/nx-ribbon.service.ts",
-        "hash": "16927943164214993601"
-      },
-      {
-        "file": "projects/nx-ribbon/src/public-api.ts",
-        "hash": "859480223204941871"
-      },
-      {
-        "file": "projects/nx-ribbon/tsconfig.lib.json",
-        "hash": "3854248313799891276"
-      },
-      {
-        "file": "projects/nx-ribbon/tsconfig.lib.prod.json",
-        "hash": "6958467553555132988"
-      },
-      {
-        "file": "projects/nx-ribbon/tsconfig.spec.json",
-        "hash": "6187331034101419811"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "16510399544445306455"
       }
-    ]
+    ],
+    "projectFileMap": {
+      "nx-ribbon": [
+        {
+          "file": "projects/nx-ribbon/.eslintrc.json",
+          "hash": "17261852592110769405"
+        },
+        {
+          "file": "projects/nx-ribbon/README.md",
+          "hash": "9838279405010182691"
+        },
+        {
+          "file": "projects/nx-ribbon/ng-package.json",
+          "hash": "2702390294967300368"
+        },
+        {
+          "file": "projects/nx-ribbon/package.json",
+          "hash": "4330490941380282423",
+          "deps": [
+            "npm:tslib",
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "projects/nx-ribbon/project.json",
+          "hash": "2400002121571119934"
+        },
+        {
+          "file": "projects/nx-ribbon/src/lib/nx-ribbon.component.spec.ts",
+          "hash": "4557041802846390603",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "projects/nx-ribbon/src/lib/nx-ribbon.component.ts",
+          "hash": "17478357138364482122",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "projects/nx-ribbon/src/lib/nx-ribbon.service.spec.ts",
+          "hash": "1879453259747226301",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "projects/nx-ribbon/src/lib/nx-ribbon.service.ts",
+          "hash": "16927943164214993601",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "projects/nx-ribbon/src/public-api.ts",
+          "hash": "859480223204941871"
+        },
+        {
+          "file": "projects/nx-ribbon/tsconfig.lib.json",
+          "hash": "3854248313799891276"
+        },
+        {
+          "file": "projects/nx-ribbon/tsconfig.lib.prod.json",
+          "hash": "6958467553555132988"
+        },
+        {
+          "file": "projects/nx-ribbon/tsconfig.spec.json",
+          "hash": "6187331034101419811"
+        }
+      ],
+      "nx-loading-spinner": [
+        {
+          "file": "projects/nx-loading-spinner/.eslintrc.json",
+          "hash": "17261852592110769405"
+        },
+        {
+          "file": "projects/nx-loading-spinner/README.md",
+          "hash": "6317003379496634689"
+        },
+        {
+          "file": "projects/nx-loading-spinner/ng-package.json",
+          "hash": "4761899837309572825"
+        },
+        {
+          "file": "projects/nx-loading-spinner/package.json",
+          "hash": "7778541835066367431",
+          "deps": [
+            "npm:tslib",
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "projects/nx-loading-spinner/project.json",
+          "hash": "11790451634903192244"
+        },
+        {
+          "file": "projects/nx-loading-spinner/src/lib/nx-loading-spinner.component.scss",
+          "hash": "10684982706469224530"
+        },
+        {
+          "file": "projects/nx-loading-spinner/src/lib/nx-loading-spinner.component.spec.ts",
+          "hash": "5887189264421348751",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "projects/nx-loading-spinner/src/lib/nx-loading-spinner.component.ts",
+          "hash": "18424391746497096434",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "projects/nx-loading-spinner/src/lib/nx-loading-spinner.interceptor.ts",
+          "hash": "14522680871991863555",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "projects/nx-loading-spinner/src/lib/nx-loading-spinner.service.spec.ts",
+          "hash": "4296292890301978298",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "projects/nx-loading-spinner/src/lib/nx-loading-spinner.service.ts",
+          "hash": "226457530448434617",
+          "deps": [
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "projects/nx-loading-spinner/src/public-api.ts",
+          "hash": "3499684610974647620"
+        },
+        {
+          "file": "projects/nx-loading-spinner/tsconfig.lib.json",
+          "hash": "3854248313799891276"
+        },
+        {
+          "file": "projects/nx-loading-spinner/tsconfig.lib.prod.json",
+          "hash": "6958467553555132988"
+        },
+        {
+          "file": "projects/nx-loading-spinner/tsconfig.spec.json",
+          "hash": "6187331034101419811"
+        }
+      ],
+      "nx-predictive-input": [
+        {
+          "file": "projects/nx-predictive-input/.eslintrc.json",
+          "hash": "3863603608333165018"
+        },
+        {
+          "file": "projects/nx-predictive-input/README.md",
+          "hash": "932991275544741411"
+        },
+        {
+          "file": "projects/nx-predictive-input/jest.config.ts",
+          "hash": "16671786033849938937"
+        },
+        {
+          "file": "projects/nx-predictive-input/ng-package.json",
+          "hash": "7424264481343093290"
+        },
+        {
+          "file": "projects/nx-predictive-input/package.json",
+          "hash": "11816644333973764766",
+          "deps": [
+            "npm:tslib",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:@angular/forms",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "projects/nx-predictive-input/project.json",
+          "hash": "17883603047053868344"
+        },
+        {
+          "file": "projects/nx-predictive-input/src/index.ts",
+          "hash": "12268281228272224616"
+        },
+        {
+          "file": "projects/nx-predictive-input/src/lib/nx-predictive-input/nx-predictive-input.component.html",
+          "hash": "15194413223897772604"
+        },
+        {
+          "file": "projects/nx-predictive-input/src/lib/nx-predictive-input/nx-predictive-input.component.scss",
+          "hash": "17024763825899938230"
+        },
+        {
+          "file": "projects/nx-predictive-input/src/lib/nx-predictive-input/nx-predictive-input.component.spec.ts",
+          "hash": "1441421084623526192",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "projects/nx-predictive-input/src/lib/nx-predictive-input/nx-predictive-input.component.ts",
+          "hash": "2314098625123568877",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "projects/nx-predictive-input/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "projects/nx-predictive-input/tsconfig.json",
+          "hash": "15487755565970508470"
+        },
+        {
+          "file": "projects/nx-predictive-input/tsconfig.lib.json",
+          "hash": "5796668385415907511"
+        },
+        {
+          "file": "projects/nx-predictive-input/tsconfig.lib.prod.json",
+          "hash": "174503844014784742"
+        },
+        {
+          "file": "projects/nx-predictive-input/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        },
+        {
+          "file": "projects/nx-predictive-input/src/lib/nx-predictive-input/helper.ts",
+          "hash": "5346573610910088726"
+        }
+      ],
+      "showcase": [
+        {
+          "file": "apps/.eslintrc.json",
+          "hash": "4476510151135444087"
+        },
+        {
+          "file": "apps/project.json",
+          "hash": "16563750215041609170"
+        },
+        {
+          "file": "apps/src/app/app.component.html",
+          "hash": "6655572812697887385"
+        },
+        {
+          "file": "apps/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/src/app/app.component.spec.ts",
+          "hash": "2444010941378180770",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/src/app/app.component.ts",
+          "hash": "14945292968285102130",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:primeng",
+            "nx-ribbon",
+            "nx-loading-spinner",
+            "nx-predictive-input",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "apps/src/app/app.config.ts",
+          "hash": "5548986198782384011",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/src/app/app.routes.ts",
+          "hash": "809736233805555256",
+          "deps": [
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/src/favicon.ico",
+          "hash": "3988961587069885523"
+        },
+        {
+          "file": "apps/src/index.html",
+          "hash": "4847190291221975814"
+        },
+        {
+          "file": "apps/src/main.ts",
+          "hash": "4169901790405087765",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/src/styles.scss",
+          "hash": "11853438106375282590"
+        },
+        {
+          "file": "apps/tsconfig.app.json",
+          "hash": "9141270935498973864"
+        },
+        {
+          "file": "apps/tsconfig.spec.json",
+          "hash": "16131161293462025937"
+        }
+      ]
+    }
   }
 }
