@@ -2,6 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
 
+# This workspace is used for Angular Libraries
+
+This repository contains the following Angular 17 libraries published to npm:
+
+- [**nx-predictive-input:**](https://www.npmjs.com/package/nx-predictive-input) An input component with predictive search functionality, enhancing user experience.
+- [**nx-ribbon:**](https://www.npmjs.com/package/@hspahic/nx-ribbon) A component to display eye-catching ribbons on your Angular components.
+
+## Installation
+
+You can install each library individually using npm:
+
+```bash
+npm install nx-predictive-input
+npm install @hspahic/nx-ribbon
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
